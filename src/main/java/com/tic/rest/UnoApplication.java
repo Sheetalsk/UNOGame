@@ -2,7 +2,7 @@ package com.tic.rest;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
-
 @ApplicationPath("api")
-public class UnoApplication extends Application {
+public  class UnoApplication extends Application {
+
 }

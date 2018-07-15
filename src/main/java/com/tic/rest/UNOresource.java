@@ -7,6 +7,11 @@ import javax.ws.rs.Path;
 public class UNOresource {
     @GET
     public String sayHello() {
-        return "aloha";
-    }
+        Card card = new Card();
+        card.setColor("purple");
+
+        return card.getId() + card.getColor();
+
+   }
+
 }
