@@ -1,16 +1,14 @@
 package com.tic.search;
 
-import javax.persistence.Tuple;
-import java.lang.reflect.Type;
+import com.tic.common.Tuple;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.Date;
 import java.util.Set;
 
 public class DateAnalyzer implements Analyzer {
-    public String[] analyze(String userInput) {
-        return null;
-    }
 
     public boolean isThisDateValid(String dateToValidate, String dateFormat) {
 
@@ -43,4 +41,7 @@ public class DateAnalyzer implements Analyzer {
 
     }
 
+    public Set<Tuple<String, Type>> analyze(String input) {
+        return Collections.emptySet();
+    }
 }
