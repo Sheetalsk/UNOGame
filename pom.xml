@@ -35,7 +35,12 @@
             <artifactId>h2</artifactId>
             <version>1.4.196</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.0</version>
+            <scope>provided</scope>
+        </dependency>
 
     </dependencies>
 
@@ -43,6 +48,9 @@
     <profiles>
         <profile>
             <id>swarm</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <dependencies>
                 <!-- WildFly Swarm Fractions -->
                 <dependency>
@@ -108,6 +116,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
