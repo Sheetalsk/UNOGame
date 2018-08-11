@@ -8,13 +8,11 @@ import {MyRestService} from "./my-rest.service";
 })
 export class AppComponent implements OnInit{
   title = 'My First Angular App';
-
-  constructor(private myRestService: MyRestService){}
-
+  constructor(private myRestService: MyRestService) {}
 
   ngOnInit() {
-    this.myRestService.getStatus().subscribe(status => {
-      this.title = status.title;
+     this.myRestService.getStatus().subscribe(status => {
+       this.title = status.title;
     })
   }
 }

@@ -9,5 +9,8 @@
         <module name="UNOGame" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="UNOGame" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
