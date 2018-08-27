@@ -13,6 +13,8 @@ public class FileSearchQueryTranslator implements Translator<String> {
     private static final String EQUALS = "=";
     private static final String BREAK_LINE = "\n";
     private static final String SEMI_COLON = ";";
+    private static final String OPEN_BRACKET = "(";
+    private static final String CLOSE_BRACKET = ")";
 
     private ColumnManager columnManager;
 
@@ -32,6 +34,8 @@ public class FileSearchQueryTranslator implements Translator<String> {
         tuples.forEach(tuple -> {
             Set<Column> columns = columnManager.manage(tuple);
             Column lastColumn = SetUtils.getLast(columns);
+            query.append(SPACE)
+                    .append(OPEN_BRACKET);
             for (Column column : columns) {
                 query.append(SPACE)
                         .append(column.getName())
@@ -50,6 +54,8 @@ public class FileSearchQueryTranslator implements Translator<String> {
                             .append(OR);
                 }
             }
+            query.append(SPACE)
+                    .append(CLOSE_BRACKET);
 
             if (!lastTuple.equals(tuple)) {
                 query.append(BREAK_LINE)

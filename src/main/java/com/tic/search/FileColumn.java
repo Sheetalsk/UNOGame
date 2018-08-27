@@ -1,6 +1,5 @@
 package com.tic.search;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
